@@ -1,0 +1,8 @@
+version: "3"
+services:
+  test_app_service:
+    image: test_app_image
+    container_name: test_app_container
+    ports:
+      - 8987:8000
+

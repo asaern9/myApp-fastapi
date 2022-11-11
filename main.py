@@ -1,11 +1,13 @@
 from fastapi import FastAPI
 from routers import users
 from routers import posts
+from routers import data_files
 
 app = FastAPI(title="Testing JsonPlaceHolder Api")
 
 app.include_router(posts.router, tags=['POSTS'])
 app.include_router(users.router, tags=['USERS'])
+app.include_router(data_files.router, tags=["DATA-FILES"])
 
 
 @app.get('/')
